@@ -3,72 +3,96 @@
   <head>
       <title>JavaScript Project</title>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     <style>
     body{
-      background-image: url(https://www.solidbackgrounds.com/images/website/950x534/950x534-blue-abstract-noise-free-website-background-image.jpg);
+
+      background-image: url(https://static.coindesk.com/wp-content/uploads/2018/11/dark-bitcoin-scaled.jpg);
+      background-size: cover;
       color: white
     }
     .container{
       position: relative;
       text-align: center;
     }
-    .centered{
-      position:absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: black
-    }
+
     .heading{
       text-align: center;
 
     }
-    .headingList{
+    .headingList {
       text-align: left;
     }
     .question1{
       margin-left: 20px;
     }
-
+    .header{
+      width: 100%;
+      height: 50px;
+      background-color: #3b3a37;
+      background-size: cover;
+    }
+    .menu{
+      float: right;
+    }
+    .menu ul{
+      list-style:none;
+      margin: 8px;
+      padding: 0px;
+    }
+    .menu li{
+      display: inline-block;
+      padding: 5 20px;
+    }
+    .menu a {
+      text-decoration: none;
+      color: #c29100;
+      text-transform: uppercase;
+      font-size: 18px;
+      font-weight: bold;
+      font-family: 'Lato';
+    }
+    .menu a:hover {
+      text-decoration: underline;
+    }
     </style>
+
+
   </head>
 
   <body>
+
+<main>
+        <div class="header">
+          <header>
+              <div class="menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+              </div>
+            </header>
+        </div>
+    <div style="font-family: 'Monaco'">
+        <h1>Robby's First Project</h1>
+    </div>
 <div class="container">
     <div class="heading">
-      <img src=https://cdn.pixabay.com/photo/2015/12/01/08/45/banner-1071799_960_720.jpg style="width:100%">
-      <br>
-        <div class= "centered"><h1><font size="+8"><u>Robby's First JavaScript Project</u></font></h1></div>
         <div class="headingList">
-                <ol><strong>Goals:</strong>
+                <ol><strong>Goals for this project:</strong>
                     <li>Showcase skills learned in course</li>
                     <li>Create a dynamic website</li>
-                    <li>Have fun!</li>
+                    <li>Prepare for a future in blockchain</li>
                 </ol>
-                <br>
         </div>
     </div>
 </div>
 
-<div class="createrInfo">
-      <table border>
-          <tr>
-            <th>Name</th>
-            <th>Phone Number</th>
-            <th>Email</th>
-          </tr>
-          <tr>
-            <td>Robby</td>
-            <td>540-797-3745</td>
-            <td>robertleebrownlow@gmail.com</td>
-          </tr>
-      </table>
-  </div>
 <p><em>This website will be interactive. Please follow instructions below!</em></p>
 <p>1. Please enter your name below to begin:</p>
       <input id="nameText" type="text", placeholder= "Enter Name Here"></input>
       <button id="nameButton">Submit</button>
-<br>
 <br>
 
 <p>2. Let's start with some simple math.</p>
@@ -86,9 +110,14 @@
                   <button id= "button1">Submit</button>
               </div>
 <br>
-<p>3. Let's play Rock, Paper, Scissors!</p>
-<button id=rps>Click Here to Play!</button>
+<p>3. Let's play Rock, Paper, Scissors! (Two different ways)</p>
+    <p>A) Manual Input:</p>
+      <button id=rps>Click Here to Play!</button>
+    <p>B) One Click:</p>
 
+<button id=rock>Rock</button>
+<button id=paper>Paper</button>
+<button id=scissors>Scissors</button>
 
 <script>
 $(document).ready(function(){
@@ -108,7 +137,7 @@ $("#button1").on("click", function(){
 
 $("#rps").click(function(){
 
-//Rock Paper Scissors code is below
+//Rock Paper Scissors part A code is below
 
   var userChoice = prompt("Do you choose rock, paper, or scissors?").toLowerCase();
   var computerChoice = Math.random();
@@ -146,13 +175,92 @@ $("#rps").click(function(){
                           }
                 };
           };
-
           alert("Users Choice: " + userChoice + ". Computers Choice: " + computerChoice + ". " + compare(userChoice, computerChoice));
   });
+//Rock Paper Scissors part B code is below
+  $("#rock").click(function(){
+    var userChoice = "rock"
+    var computerChoice = Math.random();
+    var choice1 = userChoice;
+    var choice2 = computerChoice;
+
+    if (computerChoice < 0.34) {computerChoice = "rock";
+        }     else if (computerChoice > 0.33 && computerChoice < 0.67) {computerChoice = "paper";
+      }       else {computerChoice = "scissors";
+    }
+
+
+
+    var compare = function(choice1, choice2){
+    if(choice1 === choice2) return "The result is a tie!";
+
+          if(choice1 === "rock"){
+                    if(choice2 === "scissors") {
+                        return "Rock wins!";
+                    } else if (choice2 === "paper"){
+                        return "Paper wins!";
+                    }
+          }
+    };
+    alert("Users Choice: " + userChoice + ". Computers Choice: " + computerChoice + ". " + compare(userChoice, computerChoice));
+});
+
+$("#paper").click(function(){
+  var userChoice = "paper"
+  var computerChoice = Math.random();
+  var choice1 = userChoice;
+  var choice2 = computerChoice;
+
+  if (computerChoice < 0.34) {computerChoice = "rock";
+      }     else if (computerChoice > 0.33 && computerChoice < 0.67) {computerChoice = "paper";
+    }       else {computerChoice = "scissors";
+  }
+
+  var compare = function(choice1, choice2){
+  if(choice1 === choice2) return "The result is a tie!";
+
+          if(choice1 === "paper"){
+                    if(choice2 === "rock"){
+                        return "Paper wins!";
+                    } else if (choice2 === "scissors"){
+                        return "Scissors wins!"
+                    }
+          }
+  };
+  alert("Users Choice: " + userChoice + ". Computers Choice: " + computerChoice + ". " + compare(userChoice, computerChoice));
+});
+
+$("#scissors").click(function(){
+  var userChoice = "scissors"
+  var computerChoice = Math.random();
+  var choice1 = userChoice;
+  var choice2 = computerChoice;
+
+  if (computerChoice < 0.34) {computerChoice = "rock";
+      }     else if (computerChoice > 0.33 && computerChoice < 0.67) {computerChoice = "paper";
+    }       else {computerChoice = "scissors";
+  }
+
+
+  var compare = function(choice1, choice2){
+  if(choice1 === choice2) return "The result is a tie!";
+
+  if (choice1 === "scissors"){
+            if(choice2 === "rock"){
+                return "Rock wins!";
+            } else if(choice2 === "paper"){
+                return "Scissors wins!"
+            }
+  };
+
+  };
+  alert("Users Choice: " + userChoice + ". Computers Choice: " + computerChoice + ". " + compare(userChoice, computerChoice));
+});
+
 </script>
 
 
-
+</main>
   </body>
 
 
