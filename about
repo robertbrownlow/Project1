@@ -1,0 +1,106 @@
+<html>
+
+  <head>
+      <title>About Me</title>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+    body{
+      background-image: url(https://static.coindesk.com/wp-content/uploads/2018/11/dark-bitcoin-scaled.jpg);
+      background-size: cover;
+      color: white
+    }
+    .container{
+      position: relative;
+      text-align: center;
+    }
+
+    .heading{
+      text-align: center;
+
+    }
+    .headingList{
+      text-align: left;
+    }
+    .question1{
+      margin-left: 20px;
+    }
+    .header{
+      width: 100%;
+      height: 50px;
+      background-color: #3b3a37;
+      background-size: cover;
+
+    }
+    .menu{
+      float: right;
+    }
+    .menu ul{
+      list-style:none;
+      margin: 8px;
+      padding: 0px;
+    }
+    .menu li{
+      display: inline-block;
+      padding: 5 20px;
+    }
+    .menu a {
+      text-decoration: none;
+      color: #c29100;
+      text-transform: uppercase;
+      font-size: 18px;
+      font-weight: bold;
+      font-family: 'Lato';
+    }
+    .menu a:hover {
+      text-decoration: underline;
+    }
+    .content{
+      float: left;
+      padding-left: 20px;
+      font-family: 'Optima';
+    }
+    .title{
+      padding-left: 20px
+    }
+    </style>
+
+
+  </head>
+
+  <body>
+
+<main>
+<div class="header">
+  <header>
+      <div class="menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </header>
+</div>
+
+<h1 class="title">About Me</h1>
+<div class= "content">
+<p>My name is Robby Brownlow. I have been working in outside sales for the last 7 years. During the <br>
+  peak of the Bitcoin bull run in 2017, I started doing research on Bitcoin and other cryptocurrencies.<br>
+  Like most people, I was initially very skeptical. After watching the "Hidden Secrets of Money" series by <br>
+  Mike Maloney on Youtube, I became fascinated with learning about the history of our monetary system.</p>
+
+  <p>After countless hours of research, I came to the conclusion that Bitcoin and Digital Ledger Technology <br>
+  were the way of the future! My goal now it to get a job working in the cryptocurrency ecosystem <br>
+  and help usher the world into the new age of money!</p>
+  <p>To see my LinkedIn page, <a href="https://www.linkedin.com/in/robert-brownlow-844aa9ab/" target="_blank">click here.</a></p>
+  <img src="Images/headshot.jpg" alt="Robby Brownlow" style="height:350px; padding-left:100px">
+
+</div>
+
+
+</main>
+  </body>
+
+
+
+</html>
